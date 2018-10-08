@@ -1,0 +1,35 @@
+{
+    "name": "corenta/php53-graph-sdk",
+    "description": "Facebook SDK for PHP 5.3+",
+    "keywords": ["facebook", "sdk"],
+    "type": "library",
+    "homepage": "https://github.com/corenta/php53-graph-sdk",
+    "license": "Facebook Platform",
+    "authors": [
+        {
+            "name": "Facebook",
+            "name": "Jason Yonan"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "~0.8"
+    },
+    "suggest": {
+        "paragonie/random_compat": "Provides a better CSPRNG option in PHP 5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Facebook\\": "src/Facebook/"
+        },
+        "files": ["src/Facebook/polyfills.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Facebook\\Tests\\": "tests/"
+        }
+    }
+}
